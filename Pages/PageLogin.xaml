@@ -25,7 +25,7 @@
                 Text="Пароль: "
                 Width="150"/>
             </StackPanel>
-            <PasswordBox x:Name="PsbPassword" KeyUp="txbLogin_KeyUp"/>
+            <PasswordBox x:Name="psbPassword" KeyUp="txbLogin_KeyUp"/>
             <StackPanel
                 Orientation="Horizontal">
                 <Button 

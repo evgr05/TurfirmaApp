@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -35,15 +37,17 @@ namespace TurfirmaApp.Pages
                 _currentUser = _selectedUser;
             }
             DataContext = _currentUser;
-        }
-
+        }        
         private void saveBtn_Click(object sender, RoutedEventArgs e)
-        {
+        {            
             try
             {
                 if(psbPassword.Password == psbRepPassword.Password)
                 {
-                    _currentUser.Password = psbPassword.Password;
+                    
+                    
+                    _currentUser.Password = md5.hashPassword(psbPassword.Password);
+                    //_currentUser.Password = psbPassword.Password;
                     if (_currentUser.Id == 0)
                     {
                         DBConnect.entObj.Users.Add(_currentUser);

@@ -31,7 +31,9 @@ namespace TurfirmaApp.Pages
         {
             try
             {
-                var userObj = DBConnect.entObj.Users.FirstOrDefault(x => x.Login == txbLogin.Text && x.Password == PsbPassword.Password);
+                var passUser = md5.hashPassword(psbPassword.Password);
+                var loginUser = txbLogin.Text;
+                var userObj = DBConnect.entObj.Users.FirstOrDefault(x => x.Login == loginUser && x.Password == passUser);
                 if (userObj != null)
                 {
                     PageFrame.frmObj.Navigate(new PageMenu(userObj.RoleId, userObj.Name));
@@ -43,11 +45,9 @@ namespace TurfirmaApp.Pages
                     "Ошибка",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);
-                    PsbPassword.Clear();
+                    psbPassword.Clear();
                     txbLogin.Clear();
-                }
-                
-                
+                }                
             }
             catch(Exception ex)
             {
@@ -66,7 +66,9 @@ namespace TurfirmaApp.Pages
             {
                 try
                 {
-                    var userObj = DBConnect.entObj.Users.FirstOrDefault(x => x.Login == txbLogin.Text && x.Password == PsbPassword.Password);
+                    var passUser = md5.hashPassword(psbPassword.Password);
+                    var loginUser = txbLogin.Text;
+                    var userObj = DBConnect.entObj.Users.FirstOrDefault(x => x.Login == loginUser && x.Password == passUser);
                     if (userObj != null)
                     {
                         PageFrame.frmObj.Navigate(new PageMenu(userObj.RoleId, userObj.Name));
@@ -78,11 +80,9 @@ namespace TurfirmaApp.Pages
                         "Ошибка",
                         MessageBoxButton.OK,
                         MessageBoxImage.Error);
-                        PsbPassword.Clear();
+                        psbPassword.Clear();
                         txbLogin.Clear();
                     }
-
-
                 }
                 catch (Exception ex)
                 {

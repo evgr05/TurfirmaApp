@@ -85,6 +85,7 @@
     <Compile Include="DataFilesApp\Hotels.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataFilesApp\md5.cs" />
     <Compile Include="DataFilesApp\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
