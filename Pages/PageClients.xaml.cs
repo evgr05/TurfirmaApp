@@ -69,7 +69,7 @@ namespace TurfirmaApp.Pages
             PageFrame.frmObj.Navigate(new AddEditClientsPage(null, roleId, nameUser));
         }
 
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        /*private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -92,7 +92,7 @@ namespace TurfirmaApp.Pages
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);
             }            
-        }
+        }*/
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {

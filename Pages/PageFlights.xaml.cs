@@ -75,7 +75,7 @@ namespace TurfirmaApp.Pages
             PageFrame.frmObj.Navigate(new AddEditFlightsPage((sender as Button).DataContext as Flights, roleId, nameUser));
         }
 
-        private void dellBtn_Click(object sender, RoutedEventArgs e)
+        /*private void dellBtn_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace TurfirmaApp.Pages
                     MessageBoxImage.Question);
             }
             flightsGrid.ItemsSource = DBConnect.entObj.Flights.ToList();
-        }
+        }*/
 
         private void txbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {

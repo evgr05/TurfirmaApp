@@ -76,7 +76,7 @@ namespace TurfirmaApp.Pages
             PageFrame.frmObj.Navigate(new PageMenu(roleId, nameUser));
         }
 
-        private void deleteBtn_Click(object sender, RoutedEventArgs e)
+        /*private void deleteBtn_Click(object sender, RoutedEventArgs e)
         {            
             try
             {
@@ -101,7 +101,7 @@ namespace TurfirmaApp.Pages
             }
             
             toursGrid.ItemsSource = DBConnect.entObj.Tours.ToList();
-        }
+        }*/
 
         private void txbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {

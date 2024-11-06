@@ -50,7 +50,7 @@ namespace TurfirmaApp.Pages
             PageFrame.frmObj.Navigate(new AddEditUsersPage((sender as Button).DataContext as Users, roleId, nameUser));
         }
 
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        /*private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace TurfirmaApp.Pages
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);
             }
-        }
+        }*/
 
         private void delBtn_Click(object sender, RoutedEventArgs e)
         {

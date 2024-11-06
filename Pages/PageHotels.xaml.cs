@@ -88,7 +88,7 @@ namespace TurfirmaApp.Pages
             
         }
 
-        private void deleteBtn_Click(object sender, RoutedEventArgs e)
+        /*private void deleteBtn_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -121,7 +121,7 @@ namespace TurfirmaApp.Pages
                     MessageBoxButton.OK,
                     MessageBoxImage.Question);
             }
-        }
+        }*/
 
         private void txbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
