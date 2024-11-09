@@ -10,38 +10,39 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="327*"/>
             <RowDefinition Height="71"/>
-        </Grid.RowDefinitions>        
-        <StackPanel Grid.Row="0">
-            <TextBlock Name="tblkuserName"/>
-            <DataGrid AutoGenerateColumns="False" 
-                      IsReadOnly="True"
-                      x:Name="dgUsers">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Header="Логин" Binding="{Binding Login}"/>
-                    <DataGridTextColumn Header="Роль" Binding="{Binding Role.Name}"/>
-                    <DataGridTemplateColumn>
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button x:Name="btnEdit" Content="Редактировать" Click="btnEdit_Click"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <!--<DataGridTemplateColumn>
+        </Grid.RowDefinitions>
+        <TextBlock Name="tblkuserName" Grid.Row="0" Margin="10 5 10 0"/>
+        <DataGrid AutoGenerateColumns="False" 
+                  IsReadOnly="True"
+                  x:Name="dgUsers"
+                  Grid.Row="1"
+                  Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Логин" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="Роль" Binding="{Binding Role.Name}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnEdit" Content="Редактировать" Click="btnEdit_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--<DataGridTemplateColumn>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button x:Name="btnDelete" Content="Удалить" Click="btnDelete_Click"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>-->
-                </DataGrid.Columns>
-            </DataGrid>            
-        </StackPanel>
+            </DataGrid.Columns>
+        </DataGrid>
 
         <StackPanel Orientation="Horizontal"
-                    Grid.Row="1">
+                    Grid.Row="2">
             <Button Margin="0 0 25 0"
         x:Name="addBtn"
         Content="Добавить"
